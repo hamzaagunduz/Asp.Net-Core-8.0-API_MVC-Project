@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7C38337C-6E07-4174-AB04-71F92131FB1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarProjectCore", "Core\CarProjectCore\CarProjectCore.csproj", "{2CD8E0BB-9057-4026-AE5F-44706404CBAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarProject.Domain", "Core\CarProjectCore\CarProject.Domain.csproj", "{2CD8E0BB-9057-4026-AE5F-44706404CBAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
