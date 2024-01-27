@@ -13,8 +13,6 @@
   <ItemGroup>
     <Folder Include="Features\Mediator\Commands\" />
     <Folder Include="Features\Mediator\Handler\" />
-    <Folder Include="Features\Mediator\Queries\" />
-    <Folder Include="Features\Mediator\Results\" />
   </ItemGroup>
 
   <ItemGroup>
