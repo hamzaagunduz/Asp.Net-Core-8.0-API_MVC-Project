@@ -31,5 +31,6 @@ namespace CarProject.Persistence.Context
         public DbSet<Service> Services { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+       
     }
 }

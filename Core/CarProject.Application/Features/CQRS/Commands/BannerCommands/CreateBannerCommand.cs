@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarProject.Domain.Entities
+namespace CarProject.Application.Features.CQRS.Commands.BannerCommands
 {
-    public class Banner
+    public class CreateBannerCommand
     {
-        public int BannerID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string VideoDescription { get; set; }

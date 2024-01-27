@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarProject.Domain.Entities
+namespace CarProject.Application.Features.CQRS.Results.BannerResults
 {
-    public class Banner
+    public class GetBannerByIdQueryResult
     {
         public int BannerID { get; set; }
         public string Title { get; set; }
