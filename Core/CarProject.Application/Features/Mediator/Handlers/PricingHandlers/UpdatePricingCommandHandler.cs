@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CarProject.Application.Features.Mediator.Handlers.PricingHandlers
 {
-    public class UpdatePricingCommandHandler:IRequestHandler<UpdatePricingCommand>
+    public class UpdatePricingCommandHandler : IRequestHandler<UpdatePricingCommand>
     {
         private readonly IRepository<Pricing> _repository;
 

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace CarProject.Application.Features.Mediator.Handlers.PricingHandlers
 {
-    public class GetPricingByIdQueryHandler:IRequestHandler<GetPricingByIdQuery,GetPricingByIdQueryResult>
+    public class GetPricingByIdQueryHandler : IRequestHandler<GetPricingByIdQuery,GetPricingByIdQueryResult>
     {
         private readonly IRepository<Pricing> _repository;
 

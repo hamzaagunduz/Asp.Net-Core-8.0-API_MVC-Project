@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CarProject.Application.Features.Mediator.Handlers.PricingHandlers
 {
-    public class GetPricingQueryHandler:IRequestHandler<GetPricingQuery,List<GetPricingQueryResult>>
+    public class GetPricingQueryHandler : IRequestHandler<GetPricingQuery,List<GetPricingQueryResult>>
     {
         private readonly IRepository<Pricing> _repository;
 

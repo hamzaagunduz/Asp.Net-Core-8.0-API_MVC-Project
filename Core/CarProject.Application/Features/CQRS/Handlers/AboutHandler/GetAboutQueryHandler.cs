@@ -25,6 +25,7 @@ namespace CarProject.Application.Features.CQRS.Handlers.AboutHandler
             return values.Select(x => new GetAboutQueryResults
             {
                 AboutID = x.AboutID,
+                Title= x.Title,
                 Description = x.Description,
                 ImageURL = x.ImageURL,
             }).ToList();
