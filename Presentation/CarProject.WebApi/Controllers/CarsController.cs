@@ -16,9 +16,10 @@ namespace CarProject.WebApi.Controllers
         private readonly UpdateCarCommandHandler _updateCarCommandHandler;
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
+        private readonly GetLast5CarWithBrandQueryHandler _getLast5CarWithBrandQueryHandler;
 
 
-        public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler)
+        public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler)
         {
             _createCarCommandHandler = createCarCommandHandler;
             _getCarByIdQueryHandler = getCarByIdQueryHandler;
@@ -26,6 +27,7 @@ namespace CarProject.WebApi.Controllers
             _updateCarCommandHandler = updateCarCommandHandler;
             _removeCarCommandHandler = removeCarCommandHandler;
             _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
+            _getLast5CarWithBrandQueryHandler = getLast5CarWithBrandQueryHandler;
         }
 
 
@@ -69,6 +71,12 @@ namespace CarProject.WebApi.Controllers
         public  IActionResult GetCarWithBrand()
         {
             var value =  _getCarWithBrandQueryHandler.Handle();
+            return Ok(value);
+        }
+        [HttpGet("GetLast5CarWithBrandQueryHandler")]
+        public IActionResult GetLast5CarWithBrandQueryHandler()
+        {
+            var value = _getLast5CarWithBrandQueryHandler.Handle();
             return Ok(value);
         }
 
