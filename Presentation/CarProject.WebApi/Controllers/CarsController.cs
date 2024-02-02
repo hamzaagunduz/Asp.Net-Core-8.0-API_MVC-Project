@@ -19,20 +19,20 @@ namespace CarProject.WebApi.Controllers
         private readonly GetLast5CarWithBrandQueryHandler _getLast5CarWithBrandQueryHandler;
 
 
-        public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler)
-        {
-            _createCarCommandHandler = createCarCommandHandler;
-            _getCarByIdQueryHandler = getCarByIdQueryHandler;
-            _getCarQueryHandler = getCarQueryHandler;
-            _updateCarCommandHandler = updateCarCommandHandler;
-            _removeCarCommandHandler = removeCarCommandHandler;
-            _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
-            _getLast5CarWithBrandQueryHandler = getLast5CarWithBrandQueryHandler;
-        }
+		public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler)
+		{
+			_createCarCommandHandler = createCarCommandHandler;
+			_getCarByIdQueryHandler = getCarByIdQueryHandler;
+			_getCarQueryHandler = getCarQueryHandler;
+			_updateCarCommandHandler = updateCarCommandHandler;
+			_removeCarCommandHandler = removeCarCommandHandler;
+			_getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
+			_getLast5CarWithBrandQueryHandler = getLast5CarWithBrandQueryHandler;
+		}
 
 
 
-        [HttpGet]
+		[HttpGet]
         public async Task<IActionResult> CarList()
         {
             var values = await _getCarQueryHandler.Handle();
@@ -80,5 +80,7 @@ namespace CarProject.WebApi.Controllers
             return Ok(value);
         }
 
-    }
+      
+
+	}
 }
